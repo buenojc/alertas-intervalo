@@ -1,0 +1,109 @@
+:root{
+    --color-background:  #084D6E;
+    --color-lighter-blue: #049DBF;
+    --color-darker-blue: #001D2C;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-background);
+    font-family: 'Roboto Condensed', sans-serif;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+textarea{
+    resize: none;
+    height: 40px;
+    width: 10rem;
+    border: none;
+    font-size: 30px;
+    text-align: center;
+    color: var(--color-lighter-blue);
+    outline: none;
+}
+
+
+.counter-wrapper{
+    width: 100%;
+    margin-top: 50px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.counter-wrapper p{
+    
+    color: white;
+    font-size: 22px;
+    text-align: center;
+}
+
+.selector-wrapper{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.button{
+    background-color: var(--color-lighter-blue);
+    width: 40px;
+    border:none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.button.-add{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.button.-remove{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.enter-button{
+    background-color: var(--color-lighter-blue);
+    border: none;
+    margin-top: 50px;
+    padding: 15px 40px;
+    border-radius: 15px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+footer{
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    text-align: center;
+    color: var(--color-background)
+}
+
+footer a{
+    color: var(--color-background);
+    text-decoration: none;
+}
