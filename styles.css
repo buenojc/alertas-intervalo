@@ -27,7 +27,7 @@ body{
     padding: 20px 0;
 }
 
-textarea{
+input{
     resize: none;
     height: 40px;
     width: 10rem;
