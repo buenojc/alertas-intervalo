@@ -22,12 +22,10 @@ buttonRemoveRepetition.addEventListener('click', (e) => {
 })
 
 
-setRepetition.addEventListener('keydown', e => {
-    const regex = /^[0-9]*$/;
-
-    if(!regex.test(e.key) && e.key !== 'Backspace'){
-        e.preventDefault()
-    }
+setRepetition.addEventListener('input', e => {
+    const regex = /^[a-z]*$/;
+    console.log(e.value)
+    let novaString = setRepetition.value.replace(/\D+/g, '')
+    setRepetition.value = novaString;
+    console.log(novaString)
 })
-
-
