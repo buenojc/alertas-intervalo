@@ -1,10 +1,7 @@
 const setTime = document.getElementById('set-time');
-const setRepetition = document.getElementById('set-repetition')
-const buttonAddTime = document.getElementById('add-time');
 const buttonAddRepetition = document.getElementById('add-repetition')
 const buttonRemoveRepetition = document.getElementById('remove-repetition')
 
-// setTime.value = '00:00'
 setRepetition.value = 1
 
 buttonAddRepetition.addEventListener('click', (e) => {
