@@ -31,20 +31,18 @@ setRepetition.addEventListener('input', e => {
 
 setTime.addEventListener('input', e => {
     let novaString = setTime.value.replace(/\D+/g, '')
-    console.log(novaString.length)
+    setTime.value = novaString;
 
 
     switch(novaString.length){
 
-        case 1 || 2:
+        case 1:
             setTime.value = novaString;
             break;
 
         case 2:
             let mascara = setTime.value.replace(':' ,'')
             setTime.value = mascara;
-            console.log(mascara)
-            console.log('Pegou')
             break;
 
 
@@ -69,44 +67,8 @@ setTime.addEventListener('input', e => {
             setTime.value = mascara6Digitos;
             break;
 
-
-        case 8:
-            let mascara7Digitos = novaString.replace(/(\d{2})(\d{2})(\d{2})/, '$1:$2:$3')
-            setTime.value = mascara7Digitos;
-            break;
-        
-        
         default:
             break;
 
     }
-
-    // if(setTime.value.length > 6 ){
-    //     let adicionaFormato = novaString.replace(/(\d{2})(\d{2})(\d{2})/, '$1:$2:$3')
-    //     setTime.value = adicionaFormato;
-    // }
-        
-    // if(setTime.value.length > 5 && setTime.value.length <= 5 ){
-    //     console.log('Chegou')
-    //     let adicionaFormato = novaString.replace(/(\d)(\d{2})(\d)/, '$1:$2:$3')
-    //     setTime.value = adicionaFormato;
-    // }
-    
-    // if(setTime.value.length > 2 && setTime.value.length < 5){
-    //     let adicionaFormato = novaString.replace(/(\d{2})(\d{2})/, '$1:$2')
-    //     setTime.value = adicionaFormato;
-    // }
-
-    // if(setTime.value.length > 3 && setTime.value.length < 4){
-    //     let adicionaFormato = novaString.replace(/(\d{2})(\d{2})/, '$1:$2')
-    //     setTime.value = adicionaFormato;
-    // }
-
-
-    // if(setTime.value.length > 2 && setTime.value.length < 4){
-    //     let adicionaFormato = novaString.replace(/(\d)(\d{2})/, '$1:$2')
-    //     setTime.value = adicionaFormato;
-    // }
-
-
 })
