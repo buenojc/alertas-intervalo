@@ -38,6 +38,11 @@ input{
     outline: none;
 }
 
+input.time-input{
+    width: calc(10rem + 80px);
+    border-radius: 10px;
+}
+
 
 .counter-wrapper{
     width: 100%;
