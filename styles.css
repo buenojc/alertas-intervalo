@@ -97,6 +97,12 @@ input.time-input{
     cursor: pointer;
 }
 
+.contador{
+    margin-top: 50px;
+    color: white;
+    font-size: 22px;
+}
+
 footer{
     background-color: white;
     position: absolute;
