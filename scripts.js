@@ -1,4 +1,5 @@
 const setTime = document.getElementById('set-time');
+const setRepetition = document.getElementById('set-repetition');
 const buttonAddRepetition = document.getElementById('add-repetition')
 const buttonRemoveRepetition = document.getElementById('remove-repetition')
 
@@ -22,7 +23,6 @@ buttonRemoveRepetition.addEventListener('click', (e) => {
 setRepetition.addEventListener('input', e => {
     let novaString = setRepetition.value.replace(/\D+/g, '')
     setRepetition.value = novaString;
-    console.log(novaString)
 })
 
 
