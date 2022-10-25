@@ -153,3 +153,9 @@ footer a{
     cursor: pointer;
     margin-top: 30px;
 }
+
+.timer-cover .repetition-round{
+    color: white;
+    font-size: 18px;
+    margin-top: 15px;
+}

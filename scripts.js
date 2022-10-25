@@ -6,6 +6,7 @@ const buttonStart = document.getElementById('start-button')
 const timer = document.querySelector('.timer')
 const timerCover = document.querySelector('.timer-cover');
 const stopTimer = document.querySelector('.stop-counter');
+const repetitionRound = document.querySelector('.repetition-round')
 
 const sino = new Audio('../assets/sino.mp3');
 
@@ -111,17 +112,22 @@ buttonStart.addEventListener('click', e => {
     let settedMinutes = minutes;
     let settedSeconds = seconds;
     let repetition = parseInt(setRepetition.value)
-    
-    intervalo = setInterval(() => {
+    let round = 1
+    repetitionRound.innerHTML = `${round}/${setRepetition.value}`
 
+    intervalo = setInterval(() => {
+    
         if(seconds == 0 && minutes == 0 && hours == 0){
             repetition = repetition - 1;
+            round = round + 1;
 
             if(repetition > 0){
                 sino.play();
                 hours = settedHours;
                 minutes = settedMinutes;
                 seconds = settedSeconds;
+                repetitionRound.innerHTML = `${round}/${setRepetition.value}`
+
 
             }else{
                 sino.play();
