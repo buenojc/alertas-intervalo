@@ -107,15 +107,30 @@ buttonStart.addEventListener('click', e => {
         }
     }
 
+    let settedHours = hours;
+    let settedMinutes = minutes;
+    let settedSeconds = seconds;
+    let repetition = parseInt(setRepetition.value)
     
     intervalo = setInterval(() => {
-        
+
         if(seconds == 0 && minutes == 0 && hours == 0){
-            clearInterval(intervalo);
-            setTime.value = ''
-            sino.play();
-            timerCover.classList.add('hidden')
+            repetition = repetition - 1;
+
+            if(repetition > 0){
+                sino.play();
+                hours = settedHours;
+                minutes = settedMinutes;
+                seconds = settedSeconds;
+
+            }else{
+                sino.play();
+                clearInterval(intervalo);
+                setTime.value = ''
+                timerCover.classList.add('hidden')
+            }
         }
+
         
         if(seconds < 0 && minutes == 0 && hours > 0){
             hours = hours - 1;
