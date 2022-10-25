@@ -8,7 +8,7 @@ const timerCover = document.querySelector('.timer-cover');
 const stopTimer = document.querySelector('.stop-counter');
 const repetitionRound = document.querySelector('.repetition-round')
 
-const sino = new Audio('../assets/sino.mp3');
+const sino = new Audio('https://raw.githubusercontent.com/buenojc/alertas-intervalo/master/assets/sino.mp3');
 
 let intervalo;
 setRepetition.value = 1
