@@ -7,6 +7,8 @@ const timer = document.querySelector('.timer')
 const timerCover = document.querySelector('.timer-cover');
 const stopTimer = document.querySelector('.stop-counter');
 
+const sino = new Audio('../assets/sino.mp3');
+
 let intervalo;
 setRepetition.value = 1
 
@@ -111,6 +113,7 @@ buttonStart.addEventListener('click', e => {
         if(seconds == 0 && minutes == 0 && hours == 0){
             clearInterval(intervalo);
             setTime.value = ''
+            sino.play();
             timerCover.classList.add('hidden')
         }
         
